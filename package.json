@@ -4,7 +4,7 @@
   "description": "",
   "main": "notes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --verbose"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
     "express": "^4.17.1",
     "is-url": "^1.2.4",
     "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
 }
