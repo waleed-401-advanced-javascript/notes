@@ -21,14 +21,19 @@ open your terminal
 
 Clone the repo
 
-git clone https://github.com/waleed-401-advanced-javascript/notes.git
- npm install --save-dev jest
- npm instal minimist
+```git clone https://github.com/waleed-401-advanced-javascript/notes.git```
+
+ ```npm install --save-dev jest```
+
+ ```npm instal minimist```
+
  
 
 Usage
-add note: node index.js --add or -a 'note content'
-npm test
+add note: ```node index.js --add or -a 'note content'```
+
+test : ```npm test```
+
 Architecture
 This application was build with Node.js and it includes:
 
