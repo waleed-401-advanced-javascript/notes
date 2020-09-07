@@ -1,7 +1,7 @@
 # notes
 
 Notesy
-Author: Waleed farraj Version: 1.0.0
+Author: Waleed farraj Version: 1.0.1
 
 Overview
 A terminal based (CLI) application that allows users to insert and add notes and save them to view them later .
@@ -21,14 +21,21 @@ open your terminal
 
 Clone the repo
 
-git clone https://github.com/waleedfarraj-401-advanced-javascript/notes.git
+git clone https://github.com/waleed-401-advanced-javascript/notes.git
+ npm install --save-dev jest
+ npm instal minimist
+ 
 
 Usage
 add note: node index.js --add or -a 'note content'
+npm test
 Architecture
 This application was build with Node.js and it includes:
 
-minimist package
+minimist package ,jest environment.
+
 Change Log
 07-09-2020 8:30pm - you can add a note.
+
+07-09-2020 10:30 - Testing was added you can run npm test in your terminal .
 
