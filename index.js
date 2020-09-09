@@ -5,7 +5,8 @@ const Notes = require('./lib/notes');
 
 const arg = new Input();
 const mongoose = require('mongoose');
-const Food = require('./lib/model/notes.schema');
+const Food = require('./lib/model/notes-collection');
+require('@code-fellows/supergoose');
 
 // this should be in your .env file 
 const mon = (process.env.MONGOOSE_URL);
@@ -18,4 +19,11 @@ mongoose.connect(mon, {
 });
 
 
-const note = new Notes(arg);
+async function allPrograme() {
+    const arg = new Input();
+    const note = new Notes();
+    await note.execute(arg);
+    mongoose.disconnect();
+  }
+  
+  allPrograme();

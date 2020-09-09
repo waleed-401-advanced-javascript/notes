@@ -22,9 +22,11 @@
     "express": "^4.17.1",
     "is-url": "^1.2.4",
     "minimist": "^1.2.5",
-    "mongoose": "^5.10.3"
+    "mongoose": "^5.10.3",
+    "node": "^14.8.0"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "@code-fellows/supergoose": "^1.0.11"
   }
 }
