@@ -1,25 +1,22 @@
-'use strict';
-require('dotenv').config()
+
+'use strict'
+
+const mongoose = require('mongoose');
+
+require('dotenv').config();
+
+const MONGOOSE_URL=process.env.MONGOOSE_URL;
+mongoose.connect(MONGOOSE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+}).then(()=>
+    console.log("connect")
+);
+//mongoose.disconnect();
 const Input = require('./lib/input');
 const Notes = require('./lib/notes');
-
-const argument = new Input();
-const output = new Notes(argument);
-
-output.excute();
-output.add();
-
-
-// const mongoose = require('mongoose');
-// const Food = require('./lib/model/notes-collection');
-// require('@code-fellows/supergoose');
-
-// // this should be in your .env file 
-// const mon = (process.env.MONGOOSE_URL);
-
-// mongoose.connect(mon, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false
-// });
+const arg = new Input();
+//console.log('index >>>>>>> ',arg);
+const note = new Notes(arg);
