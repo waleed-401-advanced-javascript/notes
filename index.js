@@ -5,6 +5,7 @@ const Notes = require('./lib/notes');
 
 const argument = new Input();
 const output = new Notes(argument);
+
 output.excute();
 output.add();
 
