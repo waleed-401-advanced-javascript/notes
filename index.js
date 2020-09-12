@@ -2,6 +2,8 @@
 'use strict'
 
 const mongoose = require('mongoose');
+const Collection = require('./lib/model/notes-collection.js')
+const newnotes = new Collection()
 
 require('dotenv').config();
 
@@ -14,9 +16,9 @@ mongoose.connect(MONGOOSE_URL, {
 }).then(()=>
     console.log("connect")
 );
-//mongoose.disconnect();
+
 const Input = require('./lib/input');
 const Notes = require('./lib/notes');
 const arg = new Input();
-//console.log('index >>>>>>> ',arg);
+
 const note = new Notes(arg);
