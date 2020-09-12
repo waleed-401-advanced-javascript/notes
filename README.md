@@ -1,7 +1,7 @@
 # Notesy
 Author: Waleed farraj
 
-[Test reports](https://github.com/waleed-401-advanced-javascript/data-structures-and-algorithms/actions)
+[Test reports](https://github.com/waleed-401-advanced-javascript/notes/actions)
 
 ### Setup
 .env requirements
