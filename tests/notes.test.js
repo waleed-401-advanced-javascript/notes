@@ -1,12 +1,12 @@
-'use strict'
+ 'use strict'
 
 const Notes = require('../lib/notes');
 
 // Spies!
 // we will get to know if something was called or not.
 jest.spyOn(global.console, 'log');
-jest.mock('minimist');
-const minimist = require('minimist');
+ jest.mock('minimist');
+ const minimist = require('minimist');
 
 minimist.mockImplementation(()=> {
     return {

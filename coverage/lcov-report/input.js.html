@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.67% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/15</span>
+                <span class='fraction'>10/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.55% </span>
+                <span class="strong">42.11% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/11</span>
+                <span class='fraction'>8/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.62% </span>
+                <span class="strong">71.43% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/13</span>
+                <span class='fraction'>10/14</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,7 +88,16 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,24 +105,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,29 +144,38 @@ const minimist = require('minimist');
 class Input {
   constructor() {
     const args = minimist(process.argv.slice(2));
-    this.method = this.getMethod(args);
+    this.actions = this.getaction(args);
+    //this.category = args.c;
+    //console.log(this.category);
     this.valid(args)
-&nbsp;
   }
 &nbsp;
-  getMethod(method) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (method.a || <span class="branch-1 cbranch-no" title="branch not covered" >method.add)</span> return this.getMsg(method.a || <span class="branch-1 cbranch-no" title="branch not covered" >method.add)</span>;
-  else{ <span class="cstat-no" title="statement not covered" >return 'method error: Invalid method'; </span>}
+  getaction(args) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if ((args.a || <span class="branch-1 cbranch-no" title="branch not covered" >args.add)</span>&amp;&amp; args.c) <span class="cstat-no" title="statement not covered" >return this.getnotes(args.a || args.add, args.c);</span>
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (args.list)
+    {
+<span class="cstat-no" title="statement not covered" >      return {action:'list' , category:args.list||undefined}</span>
+    }
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (args.delete)
+    {
+<span class="cstat-no" title="statement not covered" >      return {action:'delete' , Id:args.delete}</span>
+    }
+    else { return 'error: Invalid action'; }
+  }
+<span class="fstat-no" title="function not covered" >  ge</span>tnotes(notes = <span class="branch-0 cbranch-no" title="branch not covered" >'  ',</span> c) {
+<span class="cstat-no" title="statement not covered" >    if (notes !== true) <span class="cstat-no" title="statement not covered" >return { action: 'add', payload: notes, category: c };</span></span>
+    else { <span class="cstat-no" title="statement not covered" >return 'invalid notes'; </span>}
   }
 &nbsp;
-  getMsg(msg = <span class="branch-0 cbranch-no" title="branch not covered" >'')</span> {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (msg !== true) return { action: 'add', payload: msg };
-    else { <span class="cstat-no" title="statement not covered" >return '404 msg not found'; </span>}
-  }
   valid(args) {
-    console.log("method : ",this.method);
-    console.log("args :" , args)
-    console.log(" args.a: ", args.a )
-    return (args.a )  &amp;&amp; this.method;
+&nbsp;
+    return (args.a || args.add) &amp;&amp; this.actions
+&nbsp;
   }
+&nbsp;
+&nbsp;
 &nbsp;
 }
-&nbsp;
 &nbsp;
 module.exports = Input;</pre></td></tr></table></pre>
 
@@ -157,7 +184,7 @@ module.exports = Input;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Sep 07 2020 22:02:46 GMT+0300 (Eastern European Summer Time)
+                at Sat Sep 12 2020 12:34:12 GMT+0300 (Eastern European Summer Time)
             </div>
         </div>
         <script src="prettify.js"></script>
