@@ -2,6 +2,8 @@
 'use strict'
 
 const mongoose = require('mongoose');
+const Collection = require('./lib/model/notes-collection.js')
+const newnotes = new Collection()
 
 require('dotenv').config();
 
