@@ -1,46 +1,29 @@
-# notes
+# Notesy
+Author: Waleed farraj
 
-Notesy
-Author: Waleed farraj Version: 1.0.1
+[Test reports](https://github.com/waleed-401-advanced-javascript/data-structures-and-algorithms/actions)
 
-Overview
-A terminal based (CLI) application that allows users to insert and add notes and save them to view them later .
+### Setup
+.env requirements
+Database - Port Number
+.packages and indpendices 
+npm init -y 
+npm i dotenv
+npm i @code-fellows/supergoose
+npm i express 
+npm i minimist
+npm i mongose 
+npm i --save dev jest
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Running the app
+ - node index.js  -a -add to add notes and save them to the data base .
+ - node index.js --list "category "  to view all notes who share this category and --list with no string to view all 
+ - node index.js --delete 5f5caee1b5420c5f3a0dae4b for example i used this id you will use the id of the note you want to delete .
 
-Prerequisites
-Operating system: Mac OS, Windows, Linux
-Git Follow the instruction in the links below to install git in your machine
-Windows
-Mac OS
-Linux
-Codeing Editor
-Installation
-open your terminal
+### Tests
+Unit Tests: npm  test
 
-Clone the repo
+### UML
 
-```git clone https://github.com/waleed-401-advanced-javascript/notes.git```
-
- ```npm install --save-dev jest```
-
- ```npm instal minimist```
-
- 
-
-Usage
-add note: ```node index.js --add or -a 'note content'```
-
-test : ```npm test```
-
-Architecture
-This application was build with Node.js and it includes:
-
-minimist package ,jest environment.
-
-Change Log
-07-09-2020 8:30pm - you can add a note.
-
-07-09-2020 10:30 - Testing was added you can run npm test in your terminal .
+![UML](images/Notesy.png)
 

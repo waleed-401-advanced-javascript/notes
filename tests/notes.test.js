@@ -7,9 +7,9 @@ const newNote = new Notes();
 
 // Spies!
 // we will get to know if something was called or not.
-// jest.spyOn(global.console, 'log');
-//  jest.mock('minimist');
-//  const minimist = require('minimist');
+jest.spyOn(global.console, 'log');
+ jest.mock('minimist');
+ const minimist = require('minimist');
 
 // minimist.mockImplementation(()=> {
 //     return {
@@ -37,7 +37,7 @@ describe('Notes Module', ()=> {
     //     expect(console.log).toHaveBeenCalled();
     //   });
     it('can create a new notes record', () => {
-      let obj = { note: 'Note 1 ', category: 'life' };
+      let obj = { note: 'abc ', category: 'D' };
       newNote.create(obj).then(record => {
           Object.keys(obj).forEach(key => {
               expect(record[key]).toEqual(obj[key]);
@@ -45,7 +45,7 @@ describe('Notes Module', ()=> {
       });
   });
   it('can get() a notes record', async ()=> {
-       let obj = { note: 'Note 2 ', category: 'school' };
+       let obj = { note: ' any note ', category: 'life' };
       const record = await newNote.create(obj);
       console.log("record : ",record)
       const Item = await newNote.get(record._id);
