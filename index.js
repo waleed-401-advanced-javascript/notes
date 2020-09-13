@@ -9,12 +9,12 @@ require('dotenv').config();
 
 const MONGOOSE_URL=process.env.MONGOOSE_URL;
 mongoose.connect(MONGOOSE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 }).then(()=>
-    console.log("connect")
+  console.log('connect')
 );
 
 const Input = require('./lib/input');
