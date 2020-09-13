@@ -4,7 +4,9 @@
   "description": "",
   "main": "notes.js",
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "lint": "eslint '**/*.js' ",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "repository": {
     "type": "git",
